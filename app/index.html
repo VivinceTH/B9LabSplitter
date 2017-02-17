@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MetaCoin - Default Truffle App</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+ <h1>Splitter Alice you have</h1>
+
+   <h3>Addr: <span class="black"><span id="account"></span></span></h3>
+   <h3>and <span class="black"><span id="balance"></span> META</span></h3>
+   <h3>send money to your friend via contract</h3>
+   <label for="receiveradrb">Bob address</label><input type="text" id="receiveradrb" placeholder="receiveradrb"></input>
+   <label for="receiveradrc">Carol address</label><input type="text" id="receiveradrc" placeholder="receiveradrc"></input>
+   <label for="amount">amount:</label><input type="text" id="amount" placeholder="amount"></input>
+   <br><button id="send" onclick="sendCoin()">Send</button>
+
+  <br>
+  <h3>Bob current amount: <span class="black"><span id="receiverbalanceb"></span> META</span></h3>
+  <h3>Carol current amount: <span class="black"><span id="receiverbalancec"></span> META</span></h3>
+<br>
+  <span id="status"></span>
+</body>
+</html>
