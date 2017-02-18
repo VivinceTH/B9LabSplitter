@@ -6,6 +6,7 @@ contract Splitter {
   address  to;
   address  to2;
   uint value2;
+  uint valueleft;
   mapping (address => uint) balances;
   event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
@@ -21,10 +22,11 @@ contract Splitter {
   if (balances[msg.sender] < value) return false;
   balances[msg.sender] -= value;
   value2 = value/2;
+  valueleft = value - value2;
   balances[to] += value2;
   balances[to2] += value2;
   Transfer(msg.sender, to, value2);
-  Transfer(msg.sender, to2, value2);
+  Transfer(msg.sender, to2, valueleft);
   return true;
   }
 
